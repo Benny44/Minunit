@@ -66,14 +66,14 @@
 #define MINUNIT_MESSAGE_LEN 1024
 
 /*  Misc. counters */
-int minunit_run;
-int minunit_assert;
-int minunit_fail;
-int minunit_status;
+static int minunit_run;
+static int minunit_assert;
+static int minunit_fail;
+static int minunit_status;
 
 /*  Timers */
-double minunit_real_timer;
-double minunit_proc_timer;
+static double minunit_real_timer;
+static double minunit_proc_timer;
 
 
 /*  Last message */
@@ -84,7 +84,7 @@ static void (*minunit_setup)(void) = NULL;
 static void (*minunit_teardown)(void) = NULL;
 /*  Suite setup and teardown function pointers */
 static void (*minunit_suite_setup)(void) = NULL;
-void (*minunit_suite_teardown)(void);
+static void (*minunit_suite_teardown)(void);
 
 
 /*  Definitions */
